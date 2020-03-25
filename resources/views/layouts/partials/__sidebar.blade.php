@@ -9,12 +9,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-toggle="tooltip" data-placement="right" title="Test" data-nav-target="#apps" class="">
+                    <a class="@if(!Request::is('/category')) active @elseif(!Request::is('/product')) active @endif" href="#" data-toggle="tooltip" data-placement="right" title="Managements Products" data-nav-target="#apps">
                         <i data-feather="command"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="active" href="#" data-toggle="tooltip" data-placement="right" title="UI Elements"
+                    <a class="@if(!Request::is('/role')) active @elseif(!Request::is('/user')) active @endif" href="#" data-toggle="tooltip" data-placement="right" title="Management Users"
                         data-nav-target="#elements">
                         <i data-feather="layers"></i>
                     </a>

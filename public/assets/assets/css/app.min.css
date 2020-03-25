@@ -7652,13 +7652,14 @@ body.form-membership {
 }
 
 body.form-membership .form-wrapper {
-  background-color: white;
+  background-color: #313852;
   box-shadow: 0 3px 10px rgba(62, 85, 120, 0.045);
   padding: 3rem;
   border-radius: 0.5rem;
   width: 430px;
   margin: 50px auto;
   text-align: center;
+  color: white;
 }
 
 body.form-membership .form-wrapper #logo {
@@ -7669,7 +7670,7 @@ body.form-membership .form-wrapper #logo img:not(.logo) {
   display: none;
 }
 
-body.form-membership .form-wrapper h5 {
+body.form-membership .form-wrapper h1 {
   text-align: center;
   margin-bottom: 2rem;
 }

@@ -10,3 +10,19 @@
 
 <!-- App scripts -->
 <script src="{{asset('assets/assets/js/app.min.js')}}"></script>
+
+<script>
+    function signOut() {
+        swal({
+            title: "Are you sure wanna want to sign out?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                $('#logout-form').submit();
+            }
+        })
+    }
+
+</script>

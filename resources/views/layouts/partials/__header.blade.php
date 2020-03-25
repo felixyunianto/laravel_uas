@@ -25,23 +25,17 @@
                 <!-- begin::user menu -->
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link" title="User menu" data-toggle="dropdown" aria-expanded="false">
-                        <span class="mr-2 d-sm-inline d-none">Roxana Roussell</span>
+                        <span class="mr-2 d-sm-inline d-none">{{ Auth::user()->name }}</span>
                         <figure class="avatar avatar-sm">
                             <img src="{{asset('assets/assets/media/image/user/women_avatar1.jpg')}}" class="rounded-circle"
                                 alt="avatar">
                         </figure>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item">Profile</a>
-                        <a href="#" class="dropdown-item d-flex">
-                            Followers <span class="text-muted ml-auto">214</span>
-                        </a>
-                        <a href="#" class="dropdown-item d-flex">
-                            Inbox <span class="text-muted ml-auto">18</span>
-                        </a>
-                        <a href="#" class="dropdown-item" data-sidebar-target="#settings">Billing</a>
-                        <a href="#" class="dropdown-item" data-sidebar-target="#settings">Need help?</a>
-                        <a href="#" class="dropdown-item text-danger" data-sidebar-target="#settings">Sign Out!</a>
+                        <a href="#" class="dropdown-item text-danger" onclick="signOut()">Sign Out!</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </div>
                 </li>
                 <!-- end::user menu -->
